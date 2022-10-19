@@ -127,7 +127,9 @@ function age_human_animal () {
 
     for (var i = 0; i < cat_age.length; i++) {
         
-        document.write(" Age du Chat : " + cat_age[i] + "donne en Humain : " + human_age[i] + "\n");
+        document.write("Age du Chat : " + cat_age[i] + "donne en Humain : " + human_age[i] + "\n");
+
+        console.log("Age du Chat : " + cat_age[i] + "donne en Humain : " + human_age[i] + "\n");
     }
 }
 
