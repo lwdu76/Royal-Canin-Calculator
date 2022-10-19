@@ -28,7 +28,7 @@ function age_drop_down_list () {
 
     for (var i = 0; i < cat_age.length; i++) {
 
-        var list_option = document.createElement ("option"),
+        var list_option = document.createElement ("option");
 
         text_list = document.createTextNode (cat_age [i]);
 

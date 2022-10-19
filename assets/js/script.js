@@ -33,11 +33,15 @@ function breed_drop_down_list () {
 
     for (var i = 0; i < cat_list.length; i++) {
 
-        var list_option = document.getElementById ("option");
+        var list_option = document.createElement ("option");
 
         text_list = document.createTextNode (cat_list [i]);
 
+        list_option.appendChild (text_list);
+
         list_option.setAttribute ("value", cat_list [i]);
+
+        selected_list.insertBefore (list_option, selected_list.lastChild);
     }
 }
 
@@ -51,9 +55,15 @@ function age_drop_down_list () {
 
     for (var i = 0; i < cat_age.length; i++) {
 
-        var list_option = document.getElementById ("option");
+        var list_option = document.createElement ("option");
+
+        text_list = document.createTextNode (cat_age [i]);
+
+        list_option.appendChild (text_list);
 
         list_option.setAttribute ("value", cat_age [i]);
+
+        selected_list.insertBefore (list_option, selected_list.lastChild);
     }
 }
 
@@ -92,7 +102,7 @@ function age_human_animal () {
 
     for (var i = 0; i < cat_age.length; i++) {
         
-        document.write(" Age du Chat : " + cat_age[i] + "donne en age Humain : " + human_age[i] + "\n");
+        document.write(" Age du Chat : " + cat_age[i] + "donne en Humain : " + human_age[i] + "\n");
     }
 }
 
