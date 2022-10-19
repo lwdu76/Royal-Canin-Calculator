@@ -67,6 +67,8 @@ function age_human_animal () {
 
         selected_list.insertBefore (calcul_age, selected_list.lastChild);
     }
+
+    alert ("Age : " + cat_age [i] + ":" + human_age[j])
 }
 
 age_human_animal ();
