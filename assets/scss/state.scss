@@ -1,0 +1,86 @@
+$cream : #F6F6F6 ;
+$white : #FFFFFF ;
+$red : #E2001A ;
+$green : #23FF00 ;
+$grey : #707070 ;
+$black : #000000 ;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@keyframes show-anim {
+    from {opacity: 0;}
+    to {opacity: 100%;}
+  }
+
+.nav__logo img {
+    width: 40vw;
+    margin-left: 30vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    color: $grey;
+    width: 100vw;
+
+}
+
+nav {
+    background-color: $cream;
+
+    width: 100vw;
+}
+
+.index-body{
+
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    // overflow: hidden;
+    &__div {
+        width: 100vw;
+
+        height: 100vh;
+        padding: 20px;
+        overflow: hidden;
+        &-1 {
+            display: flex;
+            flex-direction: column;
+            &__btn {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+}
+
+.btn-animal {
+    background-color: white;
+    border-radius: 5px;
+    border:1px solid $grey;
+    box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.2);
+    height: 25vh;
+}
+
+.btn-animal:hover {
+
+    border:1px solid $red;
+
+}
+
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.show * {
+    animation-name: show-anim ;
+    animation-duration: 1s;
+}
