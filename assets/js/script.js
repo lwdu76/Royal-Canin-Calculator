@@ -75,7 +75,7 @@ function name_check () {
 
     name.setAttribute ('type', 'text');
 
-    var format = /[a-z|A-Z]{5,10}/;
+    var format = /[a-z|A-Z]{0,10}/;
 
     var resultat = "";
 
