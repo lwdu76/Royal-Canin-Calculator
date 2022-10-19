@@ -37,8 +37,6 @@ function breed_drop_down_list () {
 
         text_list = document.createTextNode (cat_list [i]);
 
-        list_option.appendChild (text_list);
-
         list_option.setAttribute ("value", cat_list [i]);
     }
 }
@@ -56,8 +54,6 @@ function age_drop_down_list () {
         var list_option = document.createElement ("option"),
 
         text_list = document.createTextNode (cat_age [i]);
-
-        list_option.appendChild (text_list);
 
         list_option.setAttribute ("value", cat_age [i]);
     }
