@@ -100,7 +100,7 @@ var error = email;
 while ((error = error.nextSibling).nodeType != 1);
 
 // Pour respecter la spécification HTML5
-var emailRegExp = /[a-z|A-Z]{0,10}/;
+var emailRegExp = /[a-z|A-Z]{5,10}/;
 function addEvent(element, event, callback) {
 
   var previousEventCallBack = element["on"+event];
