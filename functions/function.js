@@ -61,14 +61,14 @@ function age_human_animal () {
 
         text_list = document.createTextNode (cat_age [i] + ":" + human_age[j]);
 
+        console.log (cat_age [i] + human_age [j]);
+
         calcul_age.appendChild (text_list);
 
         calcul_age.setAttribute ("value", human_age [j]);
 
         selected_list.insertBefore (calcul_age, selected_list.lastChild);
     }
-
-    alert ("Age : " + cat_age [i] + ":" + human_age[j])
 }
 
 age_human_animal ();
