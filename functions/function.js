@@ -58,10 +58,11 @@ function name_check () {
 
         resultat = "Vrai";
     
-      } else {
+    } else {
     
         resultat = "Faux";
-      }
+    }
+    
     console.log (analyse);
 }
 
@@ -74,7 +75,7 @@ function age_human_animal () {
 
     for (var i = 0; i < cat_age.length; i++) {
         
-        document.write( "Chat : " + cat_age[i] + " est Humain : " + human_age[i] + "\n");
+        document.write(" Age du Chat : " + cat_age[i] + "donne en age Humain : " + human_age[i] + "\n");
     }
 }
 
