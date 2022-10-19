@@ -71,6 +71,6 @@ function age_human_animal () {
     }
 }
 
-age_human_animal ()
+age_human_animal ();
 
 console.log (age_human_animal ());
