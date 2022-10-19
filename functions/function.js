@@ -47,6 +47,22 @@ function name_check () {
     var name = document.getElementById ("text");
 
     name.setAttribute ('type', 'text');
+
+    var format = /[a-z|A-Z]{5,10}/;
+
+    var resultat = "";
+
+    analyse = format.test (name);
+
+    if (analyse != false){
+
+        resultat = "Vrai";
+    
+      } else {
+    
+        resultat = "Faux";
+      }
+    console.log (analyse);
 }
 
 name_check ();
