@@ -57,7 +57,7 @@ function age_human_animal () {
 
     for (var j = 0; j < human_age.length; j++) {
 
-        var calcul_age = document.createElement ("p"),
+        var calcul_age = document.getElementById ("p"),
 
         text_list = document.createTextNode (cat_age [i] + ":" + human_age[j]);
 
