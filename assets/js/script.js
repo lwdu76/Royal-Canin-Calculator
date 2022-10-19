@@ -69,13 +69,13 @@ function age_drop_down_list () {
 
 age_drop_down_list ();
 
-function name_check () {
+/*function name_check () {
 
     var name = document.getElementById ("name");
 
     name.setAttribute ('type', 'text');
 
-    var format = /[a-z|A-Z]{0,10}/;
+    var format = /[A-Z|a-z]{0,10}/;
 
     var resultat = "";
 
@@ -91,7 +91,63 @@ function name_check () {
     }
 }
 
-name_check ();
+name_check ();*/
+
+var email = document.getElementById("name");
+
+var error = email;
+
+while ((error = error.nextSibling).nodeType != 1);
+
+// Pour respecter la spécification HTML5
+var emailRegExp = /[a-z|A-Z]{0,10}/;
+function addEvent(element, event, callback) {
+
+  var previousEventCallBack = element["on"+event];
+  element["on"+event] = function (e) {
+    
+    var output = callback(e);
+
+    if (output === false) return false;
+
+    if (typeof previousEventCallBack === 'function') {
+
+    output = previousEventCallBack(e);
+      
+    if(output === false) return false;
+    }
+  }
+};
+addEvent(window, "load", function () {
+    
+var test = email.value.length === 0 || emailRegExp.test(email.value);
+
+  email.className = test ? "valid" : "invalid";
+});
+
+addEvent(email, "keyup", function () {
+  var test = email.value.length === 0 || emailRegExp.test(email.value);
+  if (test) {
+    email.className = "valid";
+    error.innerHTML = "";
+    error.className = "error";
+  } else {
+    email.className = "invalid";
+  }
+});
+
+addEvent(form, "submit", function () {
+  var test = email.value.length === 0 || emailRegExp.test(email.value);
+
+  if (!test) {
+
+    error.innerHTML = "Merci d'écrire une adresse e-mail valide.";
+
+    return false;
+  } else {
+    error.innerHTML = "";
+  }
+});
 
 function age_human_animal () {
 
