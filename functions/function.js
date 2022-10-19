@@ -38,8 +38,6 @@ function age_drop_down_list () {
 
         selected_list.insertBefore (list_option, selected_list.lastChild);
     }
-
-    console.log (age_drop_down_list ());
 }
 
 age_drop_down_list ();
@@ -51,7 +49,7 @@ function name_check () {
     name.setAttribute ('type', 'text');
 }
 
-name_check ()
+name_check ();
 
 function age_human_animal () {
 
@@ -72,5 +70,3 @@ function age_human_animal () {
 }
 
 age_human_animal ();
-
-console.log (age_human_animal ());
