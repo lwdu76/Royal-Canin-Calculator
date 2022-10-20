@@ -6,92 +6,191 @@ $grey : #707070 ;
 $black : #000000 ;
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-@keyframes show-anim {
-    from {opacity: 0;}
-    to {opacity: 100%;}
-  }
-
-.nav__logo img {
-    width: 40vw;
-    margin-left: 30vw;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+@keyframes slide-show-right {
+    from {left: 100vw}
+    to {left: 0}
 }
 
-.index-body__div-1 div:first-child {
-    margin-left: auto;
-    margin-right: auto;
+@keyframes slide-hide-right {
+    from {right: 0}
+    to {right: 100vw}
 }
 
-input, select {
-    border-style: none none solid none;
-    background: none;
+@keyframes slide-show-left {
+    from {right: 100vw}
+    to {right: 0}
+}
+
+@keyframes slide-hide-left {
+    from {left: 0}
+    to {left: 100vw}
 }
 
 html {
     font-family: 'Roboto', sans-serif;
-    color: $grey;
-    width: 100vw;
+}
 
+.slide {
+ &-hide {
+    &-left {
+        animation-fill-mode: forwards;
+        animation-name: slide-hide-left;
+        animation-duration: 0.75s;
+    }
+    &-right {
+        animation-fill-mode: forwards;
+        animation-name: slide-hide-right;
+        animation-duration: 0.75s;
+    }
+ }
+ &-show {
+    &-left {
+        animation-fill-mode: forwards;
+        animation-name: slide-show-left;
+        animation-duration: 0.75s;
+    }
+    &-right {
+        animation-fill-mode: forwards;
+        animation-name: slide-show-right;
+        animation-duration: 0.75s;
+    }
+ }
+}
+
+
+html  {
+    width: 100vw;
+    overflow: hidden;
 }
 
 nav {
+    height: 10vh;
     background-color: $cream;
-
-    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
-.index-body{
-
+.slider-div{
+    width: 100vw;
+    height: 90vh;
     display: flex;
     flex-direction: row;
+}
+.slider-page {
     width: 100vw;
-    // overflow: hidden;
-    &__div {
-        width: 100vw;
+    height: 90vh;
+    position: absolute;
 
-        height: 100vh;
-        padding: 20px;
-        overflow: hidden;
-        &-1 {
-            display: flex;
-            flex-direction: column;
-            &__btn {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
 
+}
+
+.slider-right {
+    left: 100vw
+}
+.slider-left {
+    right: 100vw
+}
+
+.slider-page-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-page-1 > * {
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.slider-page-1__title {
+
+
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.slider-page-1 h1,h2,p {
+    text-align: center;
 }
 
 .btn-animal {
-    background-color: white;
+    width: 30vw;
+    height: 50vh;
+    background: none;
+    border: solid $grey 1px;
     border-radius: 5px;
-    border:1px solid $grey;
     box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.2);
-    height: 25vh;
-    margin-top: 20px;
 }
 
 .btn-animal:hover {
+    border: solid $red 1px;
+}
 
-    border:1px solid $red;
+.btn-animal * {
+    height: 20vw;
 
 }
 
-
-
-img {
-    max-width: 100%;
-    max-height: 100%;
+.slider-page-1__btn {
+    display: flex;
+    justify-content: space-around;
 }
 
-.hide {
-    display: none;
+.logo {
+    height: 8vh;
+    margin-top: 0.5vh;
 }
 
-.show * {
-    animation-name: show-anim ;
-    animation-duration: 1s;
+
+.slider-page-2 {
+    display: flex;
+    justify-content: space-between;
 }
+
+.slider-page-2__div {
+    width: 50vw;
+    height: 90vh;
+}
+
+.slider-btn-left {
+    background: none;
+    border: none;
+}
+
+.slider-page-2__div-1 {
+    padding: 2cm;
+    padding-top: 1cm;
+}
+
+.slider-page-2__div-1__form {
+    padding-left: 1.2cm;
+    
+}
+
+.form-page {
+    margin-top: 1cm;
+}
+
+input,select {
+    background: none;
+    border-width:0px 0px 1px 0px;
+    border-style:solid;
+    border-color:black;
+    width: 20vw;
+}
+
+.btn-red {
+    background-color: $red;
+    color: $white;
+    border-radius: 110cm;
+    padding: 2mm;
+    border: none;
+
+    width: 10vw;
+    margin-top: 8vh;
+    margin-left: 5vw;
+}
+
+.image-animal-form {
+    height: 80vh;
+}
+
