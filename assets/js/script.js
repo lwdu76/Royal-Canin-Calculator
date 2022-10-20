@@ -70,3 +70,33 @@ for (var slideBtnRight of slidersBtnRight) {
 
     }); 
 }
+
+
+setInterval(formChecker, 100);
+var checkFormName = 0;
+function formChecker() {
+    if (document.getElementById('fname').value !== ''){
+        checkFormName = 1;
+
+    }
+
+    if ((checkFormName == 1 && document.getElementById('fname').value === '')||(/^[A-Za-z -]{1,}$/.test(document.getElementById('fname').value) == false)) {
+        document.querySelector('.name-error').classList.remove('d-none');
+        document.querySelector('#fname').classList.add('form-error');
+
+    } else {
+        document.querySelector('.name-error').classList.add('d-none');
+        document.querySelector('#fname').classList.remove('form-error');
+    }
+
+    if (document.getElementById('frace').value === '') {
+
+        document.querySelector('#frace').classList.add('form-error');
+        console.log('dddddd');
+    } else {
+
+        document.querySelector('#frace').classList.remove('form-error');
+    }
+
+
+}

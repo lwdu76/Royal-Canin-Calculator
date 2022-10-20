@@ -161,6 +161,7 @@ nav {
 
 .form-page {
   margin-top: 1cm;
+  height: 10vh;
 }
 
 input, select {
@@ -184,6 +185,33 @@ input, select {
 
 .image-animal-form {
   height: 80vh;
+}
+
+.name-error {
+  color: #E2001A;
+}
+
+.d-none {
+  display: none;
+}
+
+.form-error {
+  background: none;
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+  border-color: #E2001A;
+}
+
+.slider-page-3 {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 20vw 40vw 40vw;
+  gap: 0px;
+  height: 100%;
+}
+
+#share {
+  background-color: #23FF00;
 }
 
 /*# sourceMappingURL=state.css.map */
