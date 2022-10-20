@@ -66,7 +66,7 @@ for (var slideBtnRight of slidersBtnRight) {
             document.querySelector('.slider-page-'+page).classList.remove('slider-right');
             document.querySelector('.slider-page-'+(page-1)).classList.remove('slider-right');
         }   
-        
+    }
 
 document.getElementById('form-valid').addEventListener("click", function(){ 
     document.querySelector('.index-body__div-2').classList.add('hide');
