@@ -1,52 +1,72 @@
-var animal = '';
 
-document.getElementById('btn-cat').addEventListener("click", function(){ 
-    animal = 'chat' ;
-    document.querySelector('.index-body__div-1').classList.add('hide');
-    document.querySelector('.index-body__div-1').classList.remove('show');
-    document.querySelector('.index-body__div-2').classList.add('show');
-    document.querySelector('.index-body__div-2').classList.remove('hide');
-    document.querySelector('.animal-p').innerHTML = "Nom de votre "+animal+" :" ;
+var slidersBtnLeft = document.querySelectorAll('.slider-btn-left');
+var slidersBtnRight = document.querySelectorAll('.slider-btn-right');
+var sliderPages = document.querySelectorAll('.slider-page');
+var page = 1;
+var nbPagesSlide = sliderPages.length;
+var selectAnimal = '';
+
+document.querySelector('#cat-btn').addEventListener("click", function(){
+    selectAnimal = 'chat';
+    document.querySelector('.animal-name-label').innerHTML = 'Nom de votre '+ selectAnimal+' :';
+    document.querySelector('.animal-race-label').innerHTML = 'Race de votre '+ selectAnimal+' :';
+    document.querySelector('.animal-age-label').innerHTML = 'Age de votre '+ selectAnimal+' :';
+    document.querySelector('.image-animal-form').src = "./assets/img/cat.jpg";
+    document.querySelector('#fname').placeholder = "ex : Felix";
+}); 
+
+document.querySelector('#dog-btn').addEventListener("click", function(){
+    selectAnimal = 'chien';
+    document.querySelector('.animal-name-label').innerHTML = 'Nom de votre '+ selectAnimal+' :';
+    document.querySelector('.animal-race-label').innerHTML = 'Race de votre '+ selectAnimal+' :';
+    document.querySelector('.animal-age-label').innerHTML = 'Age de votre '+ selectAnimal+' :';
+    document.querySelector('.image-animal-form').src = "./assets/img/dog.jpg";
+    document.querySelector('#fname').placeholder = "ex : Medor";
+
 
 });
 
-document.getElementById('btn-dog').addEventListener("click", function(){ 
-    animal = 'chien' ;
-    document.querySelector('.index-body__div-1').classList.add('hide');
-    document.querySelector('.index-body__div-1').classList.remove('show');
-    document.querySelector('.index-body__div-2').classList.add('show');
-    document.querySelector('.index-body__div-2').classList.remove('hide');
-    document.querySelector('.animal-p').innerHTML = "Nom de votre "+animal+" :" ;
-
-});
-
-// function validate()
-// {
-//   var phoneNumber = document.getElementById('phone-number').value;
-//   var phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
-//   var phoneResult = phoneRGEX.test(phoneNumber);
-//   alert("phone:"+phoneResult );
-// }
-
-// var inputEmpty = 0
 
 
+for (var slideBtnLeft of slidersBtnLeft) {
+    slideBtnLeft.addEventListener("click", function(){ 
+        if (page > 1) {
+            page -= 1;
+            for (var sliderPage of sliderPages) {
+                sliderPage.classList.add('slider-right');
+                sliderPage.classList.remove('slide-show-right');
+                sliderPage.classList.remove('slide-show-left');
+                sliderPage.classList.remove('slide-hide-right');
+                sliderPage.classList.remove('slide-hide-left');
+            }
+            document.querySelector('.slider-page-'+page).classList.add('slide-show-left');
+            document.querySelector('.slider-page-'+(page+1)).classList.add('slide-hide-left');
+            document.querySelector('.slider-page-'+page).classList.remove('slider-right');
+            document.querySelector('.slider-page-'+(page+1)).classList.remove('slider-right');
 
+        }
+        
 
-// setInterval(function(){ 
+    }); 
+}
 
-//     if (document.getElementById('name-form').value.length == 0)
-//         inputEmpty = 1;
-//         console.log(document.getElementById('name-form').value.length)
-//     // if
-//     // document.getElementById('my-input-id').disabled = false;
-// }, 500);
+for (var slideBtnRight of slidersBtnRight) {
+    slideBtnRight.addEventListener("click", function(){ 
+        if (page < nbPagesSlide) {
+            page += 1;
+            for (var sliderPage of sliderPages) {
+                sliderPage.classList.add('slider-right');
+                sliderPage.classList.remove('slide-show-right');
+                sliderPage.classList.remove('slide-show-left');
+                sliderPage.classList.remove('slide-hide-right');
+                sliderPage.classList.remove('slide-hide-left');
+            }
+            document.querySelector('.slider-page-'+page).classList.add('slide-show-right');
+            document.querySelector('.slider-page-'+(page-1)).classList.add('slide-hide-right');
+            document.querySelector('.slider-page-'+page).classList.remove('slider-right');
+            document.querySelector('.slider-page-'+(page-1)).classList.remove('slider-right');
+        }   
+        
 
-
-document.getElementById('form-valid').addEventListener("click", function(){ 
-    document.querySelector('.index-body__div-2').classList.add('hide');
-    document.querySelector('.index-body__div-2').classList.remove('show');
-    document.querySelector('.index-body__div-3').classList.add('show');
-    document.querySelector('.index-body__div-3').classList.remove('hide');
-    console.log('fv')
-});
+    }); 
+}
