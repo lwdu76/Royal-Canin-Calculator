@@ -47,18 +47,22 @@
                     <form>
                         <div class="form-page">
                             <label for="fname" class="animal-name-label">Nom de votre animal :</label><br><br>
-                            <input type="text" id="fname" name="fname" placeholder="ex : Felix"><br>
+                            <input type="text" id="fname" name="fname" placeholder="ex : Felix">
+                            <p class="name-error d-none">Champ invalide</p>
+                            <br>
                         </div>
                         <div class="form-page">
                             <label for="frace" class="animal-race-label">Race de votre animal :</label><br><br>
                             <select id="frace" name="frace">
-                            <option value="null">Choisissez une race</option>
+                            <option value="">Choisissez une race</option>
+                            <option value="ss">dd</option>
                             </select>
                         </div>
                         <div class="form-page">
                             <label for="fage" class="animal-age-label">Age de votre animal :</label><br><br>
                             <select id="fage" name="fage">
-                            <option value="null">Choisissez une age</option>
+                            <option value="">Choisissez une age</option>
+                            <option value="rr">dd</option>
                             </select>
                         </div>
                         
@@ -76,15 +80,13 @@
 
         </div>
         <div class="slider-page slider-page-3 slider-right">
-            <button class="slider-btn-left">left</button>
-            3
+            
+            <div id="share">a</div>
+            <div id="img-animal-for-download">zzz<button class="slider-btn-left">left</button></div>
+            <div id="suggestion">ee</div>
             <button class="slider-btn-right">right</button>
         </div>
-        <div class="slider-page slider-page-4 slider-right">
-            <button class="slider-btn-left">left</button>
-            3
-            <button class="slider-btn-right">right</button>
-        </div>
+        
     </div>  
 
     
