@@ -1,3 +1,10 @@
+var checkFormName = 0;
+var checkFormName2 = 0;
+var checkFormName3 = 0;
+
+var checkGoodAnswer = false;
+var checkGoodAnswer2 = false;
+var checkGoodAnswer3 = false;
 var slidersBtnLeft = document.querySelectorAll('.slider-btn-left');
 var slidersBtnRight = document.querySelectorAll('.slider-btn-right');
 var sliderPages = document.querySelectorAll('.slider-page');

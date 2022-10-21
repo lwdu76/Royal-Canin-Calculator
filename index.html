@@ -41,7 +41,10 @@
 
             <div class="slider-page-2__div-1 slider-page-2__div">
                 <div class="slider-page-2__div-1__back">
-                    <button class="slider-btn-left">Retour</button>  
+                    <button class="slider-btn-left"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 19.271 33.709">
+                        <path id="Icon_ionic-ios-arrow-back" data-name="Icon ionic-ios-arrow-back" d="M17.06,23.044,29.815,10.3A2.409,2.409,0,1,0,26.4,6.9l-14.45,14.44a2.4,2.4,0,0,0-.07,3.322L26.393,39.2A2.409,2.409,0,1,0,29.8,35.8Z" transform="translate(-11.251 -6.194)" fill="#000000"/>
+                      </svg>
+                       Retour</button>  
                 </div>
                 <div class="slider-page-2__div-1__form">
                     <form>
@@ -55,34 +58,40 @@
                             <label for="frace" class="animal-race-label">Race de votre animal :</label><br><br>
                             <select id="frace" name="frace">
                             <option value="">Choisissez une race</option>
-                            <option value="ss">dd</option>
+
                             </select>
+                            <p class="name-error2 d-none">Champ invalide</p>
                         </div>
                         <div class="form-page">
                             <label for="fage" class="animal-age-label">Age de votre animal :</label><br><br>
                             <select id="fage" name="fage">
                             <option value="">Choisissez une age</option>
-                            <option value="rr">dd</option>
+
                             </select>
+                            <p class="name-error3 d-none">Champ invalide</p>
                         </div>
                         
                         
                     </form>
-                    <button class="slider-btn-right btn-red">Valider</button>
+                    <button id="submit-btn-r" class="btn-red slider-btn-right ">Valider</button>
                 </div>
                 
                   
             </div>
 
-            <div class="slider-page-2__div-2 slider-page-2__div">
+            <div class="d-none-in-mobil slider-page-2__div-2 slider-page-2__div">
                 <img class="image-animal-form" src="./assets/img/cat.jpg" alt="chat" srcset="">
             </div>
 
         </div>
         <div class="slider-page slider-page-3 slider-right">
             
-            <div id="share">a</div>
-            <div id="img-animal-for-download">zzz<button class="slider-btn-left">left</button></div>
+            <div id="share"></div>
+            <div id="img-animal-for-download"> <div class="img-result-age">
+                <div class="div1"><img class="img-c-result" src="./assets/img/cat.jpg" alt="" srcset=""></div>
+                <div class="div2"><img class="mini-logo" src="./assets/img/logo.svg" alt="" srcset=""></div>
+                <div class="div3"><p id="results-calcul"></p></div>
+                </div> <button class="slider-btn-left">left</button></div>
             <div id="suggestion">ee</div>
             <button class="slider-btn-right">right</button>
         </div>
