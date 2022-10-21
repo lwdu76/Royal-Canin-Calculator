@@ -105,7 +105,7 @@ function age_human_animal () {
 
 age_human_animal ();
 
-function Product_cats (image, name_kibble, price, age_cat, type_kibble){
+function Product_cat (image, name_kibble, price, age_cat, type_kibble){
     
     this.image = image;
     
@@ -133,7 +133,7 @@ function Product_cats (image, name_kibble, price, age_cat, type_kibble){
 
 }
 
-Product_cats ();
+Product_cat ();
 
 
 setInterval(formChecker, 100);
