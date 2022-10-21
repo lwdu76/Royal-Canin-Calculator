@@ -250,9 +250,9 @@ products.forEach(prod=>
                 <p>${prod.type_kibble}</p>'
                 <button class="btn-red">Voir produit</button>
             </div>
-        </div>
+        </div>`);
 
-        <div class="produice">
+        /*<div class="produice">
             <img src="./assets/img/kibble_2.jpg" alt="produit">
             <div>
                 <p class="txt-danger">Babycat milk</p>
@@ -260,7 +260,7 @@ products.forEach(prod=>
                 <p>sec et humide</p>
                 <button class="btn-red">Voir produit</button>
             </div>
-        </div>`);
+        </div>;*/
 
 
 
