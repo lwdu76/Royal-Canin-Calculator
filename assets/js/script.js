@@ -32,8 +32,6 @@ document.querySelector('#dog-btn').addEventListener("click", function(){
     document.querySelector('#fname').placeholder = "ex : Medor";
 });
 
-
-
 for (var slideBtnLeft of slidersBtnLeft) {
     slideBtnLeft.addEventListener("click", function(){ 
         if (page > 1) {
@@ -181,11 +179,8 @@ setInterval(formResults, 100);
 var resulttxt
 function formResults() {
     console.log(checkFormName)
-    // resulttxt = document.getElementById('fname').value+' a ' + ( parseInt(fage)[document.getElementById('fage').value ) + ' en âge humain']
-    // document.querySelector('#results-calcul').innerHTML == resulttxt ;
 
 // Sélection de produits
-
     resulttxt = parseInt(document.getElementById('fage').value);
     if (Number.isInteger(resulttxt)) {
         document.querySelector('#results-calcul').innerHTML = (document.getElementById('fname').value+' a '+ human_age[resulttxt]+' en âge humain')
