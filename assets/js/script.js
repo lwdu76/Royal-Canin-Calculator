@@ -31,8 +31,6 @@ document.querySelector('#dog-btn').addEventListener("click", function(){
     document.querySelector('#fname').placeholder = "ex : Medor";
 });
 
-
-
 for (var slideBtnLeft of slidersBtnLeft) {
     slideBtnLeft.addEventListener("click", function(){ 
         if (page > 1) {
