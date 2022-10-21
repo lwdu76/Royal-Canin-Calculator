@@ -246,7 +246,7 @@ products.forEach(prod=>
             <img src=${prod.image}>
             <div>
                 <p class="txt-danger">${prod.name_kibble}</p>
-                <p>>${prod.price}€</p>
+                <p>${prod.price}€</p>
                 <p>${prod.type_kibble}</p>'
                 <button class="btn-red">Voir produit</button>
             </div>
