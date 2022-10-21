@@ -286,6 +286,47 @@ input, select {
 }
 
 @media screen and (max-width: 800px) {
+  html {
+    height: 200 vh;
+  }
+  .btn-red {
+    background-color: #E2001A;
+    color: #FFFFFF;
+    border-radius: 110cm;
+    padding: 2mm;
+    border: none;
+    width: 10vw;
+    margin-top: 8vh;
+    margin-left: 0vw;
+    width: 10vw;
+  }
+  .slider-page-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+    height: 100%;
+  }
+  .img-result-age {
+    width: 100vw;
+    height: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  #img-animal-for-download {
+    grid-area: 1/1/2/2;
+  }
+  #share {
+    grid-area: 2/1/3/2;
+  }
+  #suggestion {
+    grid-area: 3/1/4/2;
+  }
   .slider-page-1__btn {
     display: flex;
     flex-direction: column;
