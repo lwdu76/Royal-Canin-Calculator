@@ -105,6 +105,36 @@ function age_human_animal () {
 
 age_human_animal ();
 
+function Product_cats (image, name_kibble, price, age_cat, type_kibble){
+    
+    this.image = image;
+    
+    this.name = name_kibble;
+    
+    this.price = price;
+
+    this.age_cat = age_cat;
+
+    this.type_kibble = type_kibble;
+
+    let products = [];
+
+    const product_1 = new Product_cat ("./assets/img/kibble_1.jpg", 'Mother & Babycat pour chatte et chaton', 25, '0 - 4 mois', 'sec et humide');
+    const product_2 = new Product_cat ('./assets/img/kibble_2.jpg', 'Babycat milk', 18.49, '0 - 4 mois', 'humide');
+    const product_3 = new Product_cat ('./assets/img/kibble_3.jpg', 'kitten pour chaton', 26.10, '5 mois - 1 an', 'sec');
+    const product_4 = new Product_cat ('./assets/img/kibble_4.jpg', 'kitten Gelée', 28.60, '5 mois - 1 an', 'humide');
+    const product_5 = new Product_cat ('./assets/img/kibble_5.jpg', 'Maine Coon Adulte', 26.09, '1 - 12 ans', 'sec');
+    const product_6 = new Product_cat ("./assets/img/kibble_6.jpg", 'Instinctive en gelée', 26.02, '1 - 7 ans', 'humide');
+    const product_7 = new Product_cat ('./assets/img/kibble_7.jpg', 'Appetite controle Care en gelée', 31.20, '7 - 12 ans', 'humide');
+    const product_8 = new Product_cat ('./assets/img/kibble_8.jpg', 'Ageing 12 +', 22.99, '+ 12 ans', 'sec');
+    const product_9 = new Product_cat ("./assets/img/kibble_9.jpg", 'Ageing 12 + en sauce', 28.60, '+ 12 ans', 'humide');
+
+    products.push (product_1, product_2, product_3, product_4, product_5, product_6, product_7, product_8, product_9);
+
+}
+
+Product_cats ();
+
 
 setInterval(formChecker, 100);
 
@@ -210,12 +240,14 @@ function formResults() {
         if (parseInt(document.getElementById('fage').value) < 5) {
             console.log('kitty')
 
-            document.querySelector('.produices').innerHTML = `<div class="produice">
-            <img src="./assets/img/kibble_1.jpg" alt="produit">
+
+products.forEach(prod=>
+    listOfProducts += `<div class="produice">
+            <img src=${prod.image}>
             <div>
-                <p class="txt-danger">Mother & Babycat pour chatte et chaton</p>
-                <p>0 - 4 mois</p>
-                <p>sec et humide</p>
+                <p class="txt-danger">${prod.name_kibble}</p>
+                <p>>${prod.price}€</p>
+                <p>${prod.type_kibble}</p>'
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>
@@ -228,7 +260,7 @@ function formResults() {
                 <p>sec et humide</p>
                 <button class="btn-red">Voir produit</button>
             </div>
-        </div>`;
+        </div>`);
 
 
 
@@ -276,6 +308,8 @@ function formResults() {
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>`;
+
+        document.getElementById('productList').innerHTML = listOfProducts;
         }
     }
 
