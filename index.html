@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./assets/css/modules.css">
     <link rel="stylesheet" href="./assets/css/state.css">
     <link rel="stylesheet" href="./assets/css/themes.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+    
 </head>
 <body>
    <header>
@@ -73,7 +75,7 @@
                         
                         
                     </form>
-                    <button id="submit-btn-r" class="btn-red slider-btn-right ">Valider</button>
+                    <button id="submit-btn-r" class="btn-red slider-btn-right">Valider</button>
                 </div>
                 
                   
@@ -86,14 +88,37 @@
         </div>
         <div class="slider-page slider-page-3 slider-right">
             
-            <div id="share"></div>
+            <div id="share">
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v15.0" nonce="iFCyO98i"></script>
+                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48.62 48.62">
+                    <path id="Icon_awesome-facebook-square" data-name="Icon awesome-facebook-square" d="M43.41,2.25H5.209A5.209,5.209,0,0,0,0,7.459v38.2A5.209,5.209,0,0,0,5.209,50.87H20.1V34.34H13.267V26.56H20.1V20.63c0-6.745,4.015-10.471,10.166-10.471a41.42,41.42,0,0,1,6.025.525V17.3H32.9c-3.344,0-4.387,2.075-4.387,4.2V26.56H35.98l-1.194,7.78H28.515V50.87h14.9A5.209,5.209,0,0,0,48.62,45.66V7.459A5.209,5.209,0,0,0,43.41,2.25Z" transform="translate(0 -2.25)" fill="#707070"/>
+                  </svg>
+                  
+                  </a></div>
+
+            </div>
             <div id="img-animal-for-download"> <div class="img-result-age">
                 <div class="div1"><img class="img-c-result" src="./assets/img/cat.jpg" alt="" srcset=""></div>
                 <div class="div2"><img class="mini-logo" src="./assets/img/logo.svg" alt="" srcset=""></div>
                 <div class="div3"><p id="results-calcul"></p></div>
-                </div> <button class="slider-btn-left">left</button></div>
-            <div id="suggestion">ee</div>
+                </div> 
+                <button class="slider-btn-left btn-red">Retour</button>
+                <button id="download-btn" class="btn-red">Télécharger</button>
+            </div>
+            <div id="suggestion">
+                <h1>Nous vous conseillons :</h1>
+                <div class="produices">
+                    
+                    
+                    
+                </div>
+
+
+
+            </div>
             <button class="slider-btn-right">right</button>
+            
         </div>
         
     </div>  

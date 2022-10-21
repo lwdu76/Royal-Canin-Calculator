@@ -222,7 +222,7 @@ input, select {
   grid-template-rows: 1fr 4fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  background-color: #E2001A;
+  background-color: #ffffff;
   overflow: hidden;
 }
 
@@ -242,11 +242,47 @@ input, select {
 }
 
 .img-c-result {
-  height: 110%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.fb-share-button {
+  border: #707070 1px solid;
+  border-radius: 555px;
+  height: 38px;
+  width: 38px;
+  padding-left: 12.5px;
+  padding-top: 12.5px;
 }
 
 .mini-logo {
   margin-top: 20px;
+}
+
+#results-calcul {
+  color: #FFFFFF;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+.produice {
+  border: #707070 1px solid;
+  border-radius: 5px;
+  min-height: 150px;
+  padding: 15px;
+  width: 350px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.txt-danger {
+  color: #E2001A;
+  margin-bottom: 20px;
+}
+
+.produice img {
+  border-radius: 5px;
+  height: 150px;
 }
 
 @media screen and (max-width: 800px) {

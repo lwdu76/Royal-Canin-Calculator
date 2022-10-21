@@ -136,36 +136,55 @@ function formChecker() {
     if ((checkFormName == 1 && document.getElementById('fname').value === '')||(/^[A-Za-z -]{1,}$/.test(document.getElementById('fname').value) == false)) {
         document.querySelector('.name-error').classList.remove('d-none');
         document.querySelector('#fname').classList.add('form-error');
-        checkGoodAnswer = true;
+
     } else {
         document.querySelector('.name-error').classList.add('d-none');
         document.querySelector('#fname').classList.remove('form-error');
-        checkGoodAnswer = false;
+
     }
     if (checkFormName2 == 1 && document.getElementById('frace').value === '') {
         document.querySelector('.name-error2').classList.remove('d-none');
         document.querySelector('#frace').classList.add('form-error');
-        checkGoodAnswer2 = true;
+
     } else {
         document.querySelector('.name-error2').classList.add('d-none');
         document.querySelector('#frace').classList.remove('form-error');
-        checkGoodAnswer2 = false;
+
     }
     if (checkFormName3 == 1 && document.getElementById('fage').value === '') {
         document.querySelector('.name-error3').classList.remove('d-none');
         document.querySelector('#fage').classList.add('form-error');
-        checkGoodAnswer3 = true;
+
     } else {
         document.querySelector('.name-error3').classList.add('d-none');
         document.querySelector('#fage').classList.remove('form-error');
-        checkGoodAnswer3 = false;
-    }
+        
 
-    if (checkGoodAnswer && checkFormName2 && checkFormName3) {
-        document.getElementById('submit-btn-r').classList.remove('d-none')
-    } else {
-        // document.getElementById('submit-btn-r').classList.add('d-none')
     }
+    if (document.getElementById('fname').value === '') {
+        checkGoodAnswer1 = true;
+    } else {
+        checkGoodAnswer1 = false;
+    }
+    if (document.getElementById('frace').value === '') {
+        checkGoodAnswer2 = true;
+    } else {
+        checkGoodAnswer2 = false;
+    }
+    if (document.getElementById('fage').value === '') {
+        checkGoodAnswer3 = true;
+    } else {
+        checkGoodAnswer3 = false;
+}
+        
+
+    // if (!checkGoodAnswer && !checkGoodAnswer2 && !checkGoodAnswer3) {
+    //     console.log('true');
+    //     document.getElementById('submit-btn-r').classList.add('slider-btn-right')
+    // } else {
+    //     console.log('false')
+    //     document.getElementById('submit-btn-r').classList.remove('slider-btn-right')
+    // }
     
 
 }
@@ -173,11 +192,23 @@ function formChecker() {
 
 
 
+document.getElementById('download-btn').addEventListener("click", function(){
+domtoimage.toJpeg(document.querySelector('.img-result-age'), { quality: 0.95 })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'my-image-name.jpeg';
+        link.href = dataUrl;
+        link.click();
+    });
+
+})
+
 setInterval(formResults, 100);
 
-console.log('ca ma')
+
 var resulttxt
 function formResults() {
+    console.log(checkFormName)
     // resulttxt = document.getElementById('fname').value+' a ' + ( parseInt(fage)[document.getElementById('fage').value ) + ' en âge humain']
     // document.querySelector('#results-calcul').innerHTML == resulttxt ;
 
@@ -187,7 +218,92 @@ function formResults() {
     if (Number.isInteger(resulttxt)) {
         document.querySelector('#results-calcul').innerHTML = (document.getElementById('fname').value+' a '+ human_age[resulttxt]+' en âge humain')
     }
+
+    console.log(document.getElementById('fage').value)
+
+    if (document.getElementById('fage').value !== NaN) {
+        if (parseInt(document.getElementById('fage').value) < 5) {
+            console.log('kitty')
+
+            document.querySelector('.produices').innerHTML = `<div class="produice">
+            <img src="./assets/img/kibble_1.jpg" alt="produit">
+            <div>
+                <p class="txt-danger">Mother & Babycat pour chatte et chaton</p>
+                <p>0 - 4 mois</p>
+                <p>sec et humide</p>
+                <button class="btn-red">Voir produit</button>
+            </div>
+        </div>
+
+        <div class="produice">
+            <img src="./assets/img/kibble_2.jpg" alt="produit">
+            <div>
+                <p class="txt-danger">Babycat milk</p>
+                <p>0 - 4 mois</p>
+                <p>sec et humide</p>
+                <button class="btn-red">Voir produit</button>
+            </div>
+        </div>`;
+
+
+
+        } else if (parseInt(document.getElementById('fage').value) > 12) {
+            console.log('old')
+
+            document.querySelector('.produices').innerHTML = `<div class="produice">
+            <img src="./assets/img/kibble_8.jpg" alt="produit">
+            <div>
+                <p class="txt-danger">Ageing 12 +</p>
+                <p>+ 12 ans</p>
+                <p>sec</p>
+                <button class="btn-red">Voir produit</button>
+            </div>
+        </div>
+
+        <div class="produice">
+            <img src="./assets/img/kibble_9.jpg" alt="produit">
+            <div>
+                <p class="txt-danger">Ageing 12 + en sauce</p>
+                <p>+ 12 ans</p>
+                <p>humide</p>
+                <button class="btn-red">Voir produit</button>
+            </div>
+        </div>`;
+        } else {
+            console.log('normal')
+
+            document.querySelector('.produices').innerHTML = `<div class="produice">
+            <img src="./assets/img/kibble_5.jpg" alt="produit">
+            <div>
+                <p class="txt-danger">Maine Coon Adulte</p>
+                <p>5 mois - 12 ans</p>
+                <p>sec</p>
+                <button class="btn-red">Voir produit</button>
+            </div>
+        </div>
+
+        <div class="produice">
+            <img src="./assets/img/kibble_6.jpg" alt="produit">
+            <div>
+                <p class="txt-danger">Instinctive en gelée</p>
+                <p>5 mois - 12 ans</p>
+                <p>humide</p>
+                <button class="btn-red">Voir produit</button>
+            </div>
+        </div>`;
+        }
+    }
+
 }
 
 formResults()
+
+
+
+
+
+
+
+
+
 
