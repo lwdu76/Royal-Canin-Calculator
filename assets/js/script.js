@@ -13,6 +13,9 @@ var page = 1;
 var nbPagesSlide = sliderPages.length;
 var selectAnimal = '';
 
+// Slider js
+
+
 document.querySelector('#cat-btn').addEventListener("click", function(){
     selectAnimal = 'chat';
     document.querySelector('.animal-name-label').innerHTML = 'Nom de votre '+ selectAnimal+' :';
@@ -79,7 +82,7 @@ for (var slideBtnRight of slidersBtnRight) {
 
 
 
-
+// Remplissage formulaire
 
 
 function breed_drop_down_list () {
@@ -122,6 +125,9 @@ age_human_animal ();
 
 
 setInterval(formChecker, 100);
+
+// Verification formulaire
+
 
 function formChecker() {
     if (document.getElementById('fname').value !== ''){
@@ -178,14 +184,6 @@ function formChecker() {
 }
         
 
-    // if (!checkGoodAnswer && !checkGoodAnswer2 && !checkGoodAnswer3) {
-    //     console.log('true');
-    //     document.getElementById('submit-btn-r').classList.add('slider-btn-right')
-    // } else {
-    //     console.log('false')
-    //     document.getElementById('submit-btn-r').classList.remove('slider-btn-right')
-    // }
-    
 
 }
 
@@ -212,7 +210,7 @@ function formResults() {
     // resulttxt = document.getElementById('fname').value+' a ' + ( parseInt(fage)[document.getElementById('fage').value ) + ' en âge humain']
     // document.querySelector('#results-calcul').innerHTML == resulttxt ;
 
-
+// Sélection de produits
 
     resulttxt = parseInt(document.getElementById('fage').value);
     if (Number.isInteger(resulttxt)) {
