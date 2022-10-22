@@ -178,7 +178,7 @@ function Product_cat (image, name_kibble, price, age_recommandation, type_kibble
 
 this.image = image;
     
-this.name = name_kibble;
+this.name_kibble = name_kibble;
 
 this.price = price;
 
