@@ -214,7 +214,7 @@ function formResults() {
     }
 
     if (document.getElementById('fage').value !== NaN) {
-        if (parseInt(document.getElementById('fage').value) <= 4) {
+        if (parseInt(document.getElementById('fage').value) < 5) {
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
             <img src=${product_1.image} alt="produit">
@@ -232,30 +232,6 @@ function formResults() {
                 <p class="txt-danger">${product_2.name_kibble}</p>
                 <p>${product_2.age_recommandation}</p>
                 <p>${product_2.type_kibble}</p>
-                <button class="btn-red">Voir produit</button>
-            </div>
-        </div>`;
-
-        }
-        
-        else if (parseInt(document.getElementById('fage').value) > 4) {
-
-            document.querySelector('.produices').innerHTML = `<div class="produice">
-            <img src=${product_3.image} alt="produit">
-            <div>
-                <p class="txt-danger">${product_3.name_kibble}</p>
-                <p>${product_3.age_recommandation}</p>
-                <p>${product_3.type_kibble}</p>
-                <button class="btn-red">Voir produit</button>
-            </div>
-        </div>
-
-        <div class="produice">
-            <img src=${product_4.image} alt="produit">
-            <div>
-                <p class="txt-danger">${product_4.name_kibble}</p>
-                <p>${product_4.age_recommandation}</p>
-                <p>${product_4.type_kibble}</p>
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>`;
@@ -300,16 +276,6 @@ function formResults() {
                 <p class="txt-danger">${product_6.name_kibble}</p>
                 <p>${product_6.age_recommandation}</p>
                 <p>${product_6.type_kibble}</p>
-                <button class="btn-red">Voir produit</button>
-            </div>
-        </div>
-        
-        <div class="produice">
-            <img src=${product_7.image} alt="produit">
-            <div>
-                <p class="txt-danger">${product_7.name_kibble}</p>
-                <p>${product_7.age_recommandation}</p>
-                <p>${product_7.type_kibble}</p>
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>`;
