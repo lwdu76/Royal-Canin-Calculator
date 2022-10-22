@@ -217,11 +217,11 @@ function formResults() {
         if (parseInt(document.getElementById('fage').value) < 5) {
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
-            <img src="./assets/img/kibble_1.jpg" alt="produit">
+            <img src="${product_1.image}" alt="produit">
             <div>
-                <p class="txt-danger">Mother & Babycat pour chatte et chaton</p>
-                <p>0 - 4 mois</p>
-                <p>sec et humide</p>
+                <p class="${product_1.name_kibble}</p>
+                <p>${product_1.age_recommandation}</p>
+                <p>${product_1.type_kibble}</p>
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>
