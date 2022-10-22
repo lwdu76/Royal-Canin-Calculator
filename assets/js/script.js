@@ -238,7 +238,7 @@ function formResults() {
 
         }
         
-        if (parseInt(document.getElementById('fage').value) <= 12) {
+        else if (parseInt(document.getElementById('fage').value) > 4) {
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
             <img src=${product_3.image} alt="produit">
