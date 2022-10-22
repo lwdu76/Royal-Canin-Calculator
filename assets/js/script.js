@@ -174,7 +174,7 @@ domtoimage.toJpeg(document.querySelector('.img-result-age'), { quality: 0.95 })
 
 setInterval(formResults, 100);
 
-function Products (image, name_kibble, price, age_recommandation, type_kibble) {
+function Product_cat (image, name_kibble, price, age_recommandation, type_kibble) {
 
 this.image = image;
     
