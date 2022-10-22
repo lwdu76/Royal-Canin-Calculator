@@ -219,9 +219,9 @@ function formResults() {
             document.querySelector('.produices').innerHTML = `<div class="produice">
             <img src="${product_1.image}" alt="produit">
             <div>
-                <p class="${product_1.name_kibble}"</p>
-                <p>"${product_1.age_recommandation}"</p>
-                <p>"${product_1.type_kibble}"</p>
+                <p class="${product_1.name_kibble}</p>
+                <p>${product_1.age_recommandation}</p>
+                <p>${product_1.type_kibble}</p>
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>
