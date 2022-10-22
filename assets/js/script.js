@@ -227,11 +227,11 @@ function formResults() {
         </div>
 
         <div class="produice">
-            <img src="./assets/img/kibble_2.jpg" alt="produit">
+            <img src=${product_2.image} alt="produit">
             <div>
-                <p class="txt-danger">Babycat milk</p>
-                <p>0 - 4 mois</p>
-                <p>sec et humide</p>
+                <p class="txt-danger">${product_2.name_kibble}</p>
+                <p>${product_2.age_recommandation}</p>
+                <p>${product_2.type_kibble}</p>
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>`;
@@ -239,21 +239,21 @@ function formResults() {
         } else if (parseInt(document.getElementById('fage').value) > 12) {
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
-            <img src="./assets/img/kibble_8.jpg" alt="produit">
+            <img src=${product_8.image} alt="produit">
             <div>
-                <p class="txt-danger">Ageing 12 +</p>
-                <p>+ 12 ans</p>
-                <p>sec</p>
+                <p class="txt-danger">${product_8.name_kibble}</p>
+                <p>${product_8.age_recommandation}</p>
+                <p>${product_8.type_kibble}</p>
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>
 
         <div class="produice">
-            <img src="./assets/img/kibble_9.jpg" alt="produit">
+            <img src=${product_9.image} alt="produit">
             <div>
-                <p class="txt-danger">Ageing 12 + en sauce</p>
-                <p>+ 12 ans</p>
-                <p>humide</p>
+                <p class="txt-danger">${product_9.name_kibble}</p>
+                <p>${product_9.age_recommandation}</p>
+                <p>${product_9.type_kibble}</p>
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>`;
@@ -261,21 +261,21 @@ function formResults() {
         } else {
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
-            <img src="./assets/img/kibble_5.jpg" alt="produit">
+            <img src=${product_5.image} alt="produit">
             <div>
-                <p class="txt-danger">Maine Coon Adulte</p>
-                <p>5 mois - 12 ans</p>
-                <p>sec</p>
+                <p class="txt-danger">${product_5.name_kibble}</p>
+                <p>${product_5.age_recommandation}</p>
+                <p>${product_5.type_kibble}</p>
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>
 
         <div class="produice">
-            <img src="./assets/img/kibble_6.jpg" alt="produit">
+            <img src=${product_6.image} alt="produit">
             <div>
-                <p class="txt-danger">Instinctive en gelée</p>
-                <p>5 mois - 12 ans</p>
-                <p>humide</p>
+                <p class="txt-danger">${product_6.name_kibble}</p>
+                <p>${product_6.age_recommandation}</p>
+                <p>${product_6.type_kibble}</p>
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>`;
