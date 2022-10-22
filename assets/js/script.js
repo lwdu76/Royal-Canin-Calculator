@@ -209,10 +209,7 @@ function formResults() {
             </div>
         </div>`;
 
-
-
         } else if (parseInt(document.getElementById('fage').value) > 12) {
-            console.log('old')
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
             <img src="./assets/img/kibble_8.jpg" alt="produit">
@@ -233,8 +230,8 @@ function formResults() {
                 <button class="btn-red">Voir produit</button>
             </div>
         </div>`;
+
         } else {
-            console.log('normal')
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
             <img src="./assets/img/kibble_5.jpg" alt="produit">
@@ -257,7 +254,6 @@ function formResults() {
         </div>`;
         }
     }
-
 }
 
 formResults();
