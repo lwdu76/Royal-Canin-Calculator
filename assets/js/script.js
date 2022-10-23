@@ -208,13 +208,13 @@ var resultat_text
 function formResults() {
 
 // Sélection de produits
-    resultat_text = parse(document.getElementById('fage').value);
+    resultat_text = parseInt(document.getElementById('fage').value);
     if (Number.isInteger(resultat_text)) {
         document.querySelector('#results-calcul').innerHTML = (document.getElementById('fname').value+' a '+ human_age[resultat_text]+' en âge humain')
     }
 
     if (document.getElementById('fage').value !== NaN) {
-        if (parse(document.getElementById('fage').value) <= "5 mois") {
+        if (parseInt(document.getElementById('fage').value) < 5) {
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
             <img src=${product_1.image} alt="produit">
@@ -236,7 +236,7 @@ function formResults() {
             </div>
         </div>`;
 
-        } else if (parse(document.getElementById('fage').value) > "12 ans") {
+        } else if (parseInt(document.getElementById('fage').value) > 12) {
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
             <img src=${product_8.image} alt="produit">
