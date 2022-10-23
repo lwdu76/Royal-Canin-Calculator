@@ -214,7 +214,7 @@ function formResults() {
     }
 
     if (document.getElementById('fage').value !== NaN) {
-        if (parseInt(document.getElementById('fage').value) < "5 mois") {
+        if (parseInt(document.getElementById('fage').value) <= "5 mois") {
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
             <img src=${product_1.image} alt="produit">
@@ -236,7 +236,7 @@ function formResults() {
             </div>
         </div>`;
 
-        } else if (parseInt(document.getElementById('fage').value) > 12) {
+        } else if (parseInt(document.getElementById('fage').value) > "12 ans") {
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
             <img src=${product_8.image} alt="produit">
