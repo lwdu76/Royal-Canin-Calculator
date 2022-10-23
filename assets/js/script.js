@@ -214,7 +214,7 @@ function formResults() {
     }
 
     if (document.getElementById('fage').value !== NaN) {
-        if (parseInt(document.getElementById('fage').value) < 5) {
+        if (parseInt(document.getElementById('fage').value) < "5 mois") {
 
             document.querySelector('.produices').innerHTML = `<div class="produice">
             <img src=${product_1.image} alt="produit">
